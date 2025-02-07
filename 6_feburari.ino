@@ -85,9 +85,9 @@ void loop() {
   String moxData = readMOX();  // Get MOX sensor data
 
   // Prepare log data
-  if (getttemp() > 100){
+  if (gettemp() > 100){
     writeToSDCard("Brinner");
-    Serial.println(det verkar brinna/väldigt varmt);
+    Serial.println("det verkar brinna/väldigt varmt");
   }
 
   String logData = "Temperature: " + String(gettemp()) + " C, Pressure: " + String(bmpData.pressure) + " hPa, " + moxData;
